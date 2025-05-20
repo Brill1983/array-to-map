@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+    id 'groovy'
+    id 'application'
+}
+
+group = 'ru.brill'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    implementation 'org.apache.groovy:groovy:4.0.21'
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.11.4'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.11.4'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+application {
+    mainClass = 'ru.brill.MainJava'
+}
